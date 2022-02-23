@@ -19,6 +19,8 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Access views for tunr project
     path('', include('tunr.urls')),
+    # Include URL for DRF's authentication
     path('api-auth', include('rest_framework.urls', namespace='rest_framework'))
 ]

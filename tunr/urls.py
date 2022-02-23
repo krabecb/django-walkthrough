@@ -2,7 +2,10 @@ from django.urls import path
 from . import views
 from rest_framework.routers import DefaultRouter
 
+# as_view() since we are going to be using class-based views
+
 urlpatterns = [
+    # This is localhost:8000
     path('', views.artist_list, name='artist_list'),
     # path('artists/<int:pk>', views.artist_detail, name='artist_detail'),
     path('artists/', views.ArtistList.as_view(), name='artist_list'),

@@ -39,9 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tunr',
     'django_extensions',
+    # Gives us a nice interface and is widely used. Easy to use CRUD
+    # operations out of the box
     'rest_framework',
 ]
 
+# Require authentication when needed, CRUD capability
+# The lecture has documentation for using with JWT
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
